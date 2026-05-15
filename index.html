@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchOperator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesMedia.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <a href="pages/listOperators.html" class="navLink">К списку операторов</a>
+    <div class="container">
+        <div class="container-head">
+            <h1>Поиск оператора ЭДО</h1>
+            <div class="loading-dots">
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </div>
+        </div>
+        
+        <div class="form">
+            <input id="inp-1" type="text" placeholder="Введите код оператора (2BM...)" autofocus>
+            <button id="btn-1" type="submit">Найти</button>
+        </div>
+
+        <div class="container-operator">
+            <div class="container-operator-h">
+                <h2 id="h2-operator"></h2>
+                <h3 id="h3-operator"></h3>
+            </div>
+            <div class="container-operator-btn">
+                <button id="btn-2" type="submit">X</button>
+            </div>
+            
+        </div>
+
+        <div class="container-info">
+            <h3 class="btn-search">Как найти код?</h3>
+            <div class="container-info-how-search">
+                <p>Нужно запросить у клиента полный идентификатор, и посмотреть на первые 3 знака ID. <br><br>Также можно вставить полный идентификатор!</p>
+                <h4>Если программа не находит, но вы уверены, что ввели правильный идентификатор. <br>Проверте язык написания первых трех символов - они должен быть написаны латиницей (англ. раскладка)</h4>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
