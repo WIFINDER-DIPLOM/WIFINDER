@@ -1,0 +1,21 @@
+Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Unbounded', sans-serif;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #F7F0F0;
+  background-color: rgba(232, 78, 15, 0.5);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  letter-spacing: 0.01em;
+}
+
+Button:hover {
+  background-color: rgba(232, 78, 15, 1);
+}

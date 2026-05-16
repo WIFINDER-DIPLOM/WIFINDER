@@ -1,0 +1,202 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  justify-self: center;
+  top: 1vh;
+  border-radius: 30px;
+  max-width: 70%;
+  min-width: 60%;
+  min-height: 4.5vh;
+  max-height: 4.5vh;
+  z-index: 99999;
+  background-color: rgba(232, 78, 15, 0.5);
+  padding: 0.2vh;
+}
+
+.buttonNav {
+  background-color: transparent;
+  width: 10vh;
+  transition:
+    color 0.2s ease,
+    font-size 0.2s ease;
+  margin: 0 2vh 0 2vh;
+  font-size: 14pt;
+  white-space: nowrap;
+  padding: 0;
+  color: var(--primary-color-white);
+}
+
+.buttonNav:hover {
+  background-color: transparent;
+  font-size: 15pt;
+  transition:
+    color 0.2s ease,
+    font-size 0.4s ease;
+}
+
+.buttonNav.active {
+  background-color: transparent;
+  font-size: 16pt;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.buttonNav.active:hover {
+  background-color: transparent;
+  color: var(--primary-color-white);
+  font-size: 16pt;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.buttonNavLogin {
+  padding: 0.3vh 1vh 0.3vh 1vh;
+  border: solid 1px;
+  background-color: transparent;
+  min-width: 176px;
+  margin-right: 1vh;
+  border-radius: 25px;
+  font-size: 14pt;
+  letter-spacing: 0.07em;
+}
+.buttonNavLogin:hover {
+  background-color: var(--primary-color-orange);
+}
+.left {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  display: flex;
+  justify-content: end;
+  width: 30%;
+}
+
+.imgNaLogin {
+  width: 37px;
+  padding-left: 0.5vh;
+}
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .container {
+    top: 1vh;
+
+    min-height: auto;
+    max-height: none;
+    background-color: transparent;
+  }
+
+  .buttonNav {
+    width: auto;
+    font-size: 12pt;
+    margin: 0 1vh 0 1vh;
+    padding: 0.5vh 1vh;
+    white-space: nowrap;
+  }
+
+  .buttonNav:hover {
+    font-size: 12pt;
+  }
+
+  .buttonNav.active {
+    font-size: 13pt;
+  }
+
+  .buttonNav.active:hover {
+    font-size: 13pt;
+  }
+
+  .buttonNavLogin {
+    min-width: auto;
+    padding: 0.5vh 1.5vh;
+    font-size: 11pt;
+    margin-right: 0;
+    white-space: nowrap;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: end;
+    order: 2;
+    margin-top: 0.5vh;
+    margin-right: 5vh;
+  }
+
+  .imgNaLogin {
+    width: 25px;
+    padding-left: 0.3vh;
+  }
+}
+
+/* Очень маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .container {
+    max-width: 98%;
+    min-width: 95%;
+    border-radius: 20px;
+    top: 0.5vh;
+  }
+
+  .buttonNav {
+    font-size: 10pt;
+    margin: 0 0.5vh;
+    padding: 0.3vh 0.8vh;
+  }
+
+  .buttonNav.active {
+    font-size: 11pt;
+  }
+
+  .buttonNavLogin {
+    font-size: 10pt;
+    padding: 0.4vh 1.2vh;
+  }
+
+  .left {
+    gap: 0.3vh;
+  }
+
+  .imgNaLogin {
+    width: 20px;
+  }
+  .buttonNav {
+    width: 10px;
+  }
+}
+
+/* Горизонтальная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+  .container {
+    max-width: 85%;
+    min-width: 80%;
+    top: 0.5vh;
+  }
+
+  .left {
+    width: 70%;
+    order: 0;
+  }
+
+  .right {
+    width: 30%;
+    order: 0;
+    margin-top: 0;
+  }
+
+  .buttonNav {
+    font-size: 11pt;
+  }
+}
+

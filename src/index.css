@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Unbounded";
+  src: url("../src/assets/fonts/Unbounded/Unbounded-VariableFont_wght.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color-white: #F7F0F0;
+  --primary-color-for-text: #1A1614;
+  --primary-color-orange: #E84E0F;
+  --primary-color-orange-a-50: rgba(232, 78, 15, .3);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--primary-color-white);
+}
+
+::selection {
+  background: var(--primary-color-orange);
+  color: var(--primary-color-white);
+}

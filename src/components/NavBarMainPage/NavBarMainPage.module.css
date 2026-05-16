@@ -1,0 +1,1105 @@
+/* Основной контейнер */
+/* .appContainer {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+} */
+
+/* .navBarWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+} */
+
+.navBarContainer {
+  position: fixed;
+  z-index: 1000;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Контейнер для содержимого (панель + контент) */
+.contentWrapper {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+/* Контейнер боковой панели (НЕ overlay) */
+.sidePanelContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-radius: 0px 0 2rem 0rem;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidePanel {
+  width: 380px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid #e2e8f0;
+}
+
+.sidePanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.sidePanelHeader h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  background: #f1f5f9;
+  color: #ef4444;
+}
+
+.sidePanelContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 12px;
+}
+
+.sectionItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.sectionItem:hover {
+  transform: translateX(4px);
+}
+
+.activeSection {
+  background: #eff6ff;
+  border-color: var(--primary-color-orange-a-50);
+}
+
+.sectionIcon {
+  font-size: 2rem;
+  width: 52px;
+  text-align: center;
+}
+
+.sectionInfo {
+  flex: 1;
+  white-space: normal;
+}
+
+.sectionTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.sectionDesc {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Основная область контента */
+.mainContentArea {
+  flex: 1;
+  padding: 32px;
+  min-height: 100vh;
+  background: #f7f0f0;
+}
+
+.navBarCard {
+  width: 60vh;
+}
+
+.expandedCard {
+  background: linear-gradient(90deg, #f0a88a 0%, #e89070 50%, #f0a88a 100%);
+  box-shadow: 0 8px 40px rgba(232, 93, 38, 0.4);
+}
+
+.collapsedCard {
+  background-color: rgba(232, 78, 15, 0.5);
+  box-shadow: 0 4px 20px rgba(232, 93, 38, 0.2);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 2.5vh;
+}
+
+.expandedTopBar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 1rem;
+}
+
+.collapsedTopBar {
+  border-bottom: 0px solid transparent;
+  padding-bottom: 1rem;
+}
+
+.moreDotsBtn {
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  padding: 0.5rem;
+}
+
+Button:hover {
+  background-color: white;
+}
+
+.expandedDotsBtn {
+  background: transparent;
+  color: #fff;
+}
+
+.collapsedDotsBtn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #e85d26;
+}
+
+.userIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 15vh;
+}
+
+.expandedUserIcon {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.collapsedUserIcon {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.expandedUserName {
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.collapsedUserName {
+  color: #fff;
+  text-shadow: none;
+}
+
+.logoutBtn {
+  padding: 8px 24px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+}
+
+.menuItemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.activeMenuItem {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menuItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  flex-shrink: 0;
+}
+
+.menuItemLabel {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.activeIndicator {
+  position: absolute;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.8;
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 24px;
+  padding: 28px 32px;
+  width: 90%;
+  max-width: 720px;
+  box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.2s ease-out;
+}
+
+.modalContent h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.editForm label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.editForm input {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.editForm input:focus {
+  outline: none;
+  border-color: var(--primary-color-orange);
+  box-shadow: 0 0 0 3px var(--primary-color-orange-a-50);
+}
+
+.modalButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.cancelBtn,
+.saveBtn {
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+}
+
+.cancelBtn {
+  background: var(--primary-color-orange-a-50);
+  color: var(--primary-color-white);
+}
+
+.cancelBtn:hover {
+  background: var(--primary-color-orange);
+}
+
+.saveBtn {
+  background: var(--primary-color-orange-a-50);
+  color: var(--primary-color-white);
+}
+
+.saveBtn:hover {
+  background: var(--primary-color-orange);
+  transform: scale(1.02);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Остальные стили (таблицы, карточки и т.д.) остаются без изменений */
+.sectionContent {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  background: var(--primary-color-orange-a-50);
+  border-bottom: 1px solid #f0e4dc;
+}
+
+.contentIcon {
+  font-size: 2.8rem;
+}
+
+.contentHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.contentBody {
+  padding: 32px;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoCard {
+  background: #fef9f5;
+  border-left: 5px solid #e89070;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.dataTable th {
+  background: #f1f5f9;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.dataTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.colorSwatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.red {
+  background: #ef4444;
+}
+.yellow {
+  background: #facc15;
+}
+.black {
+  background: #1e293b;
+}
+.blue {
+  background: #3b82f6;
+}
+
+.diagramCard {
+  background: #f1f5f9;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.diagramCaption {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.calculatorCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.calcBtn {
+  background: #e89070;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.calcResult {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 16px;
+}
+
+.abbrevGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.abbrevItem {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 14px 18px;
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  /* ===== Навбар ===== */
+  .navBarContainer {
+    width: 100%;
+    z-index: 1000000;
+    background-color: transparent;
+  }
+
+  .navBarCard {
+    width: auto;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .userIcon {
+    display: none;
+  }
+
+  .userName {
+    display: none;
+  }
+
+  .logoutBtn {
+    padding: 6px 14px;
+    font-size: 13px;
+    width: 7rem;
+    height: 3rem;
+  }
+
+  .moreDotsBtn {
+    padding: 0.35rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .menuItemsContainer {
+    padding: 8px 4px;
+  }
+
+  .menuItem {
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin: 2px 4px;
+  }
+
+  .menuItemIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .menuItemLabel {
+    font-size: 14px;
+  }
+
+  /* ===== Контейнер контента ===== */
+  .contentWrapper {
+    flex-direction: column;
+    margin-left: 0 !important;
+    margin-top: 72px; /* отступ под фиксированный навбар */
+    min-height: calc(100vh - 72px);
+  }
+
+  .sidePanelContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100vh;
+    z-index: 1100;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 100000;
+  }
+
+  .sidePanel {
+    width: 85% !important;
+    max-width: 320px;
+    height: 100vh;
+    border-radius: 0 24px 24px 0;
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  .sidePanelHeader {
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .sidePanelHeader h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .closeBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .sidePanelContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+
+  }
+
+  .sectionItem {
+    padding: 12px 14px;
+    gap: 12px;
+    border-radius: 14px;
+    margin: 4px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .sectionItem:hover {
+    background: rgba(59, 130, 246, 0.08);
+  }
+
+  .sectionIcon {
+    font-size: 1.6rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .sectionInfo {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .sectionTitle {
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .sectionDesc {
+    font-size: 0.75rem;
+    color: #64748b;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ===== Основная область контента ===== */
+  .mainContentArea {
+    padding: 12px;
+    flex: 1;
+  }
+
+  .sectionContent {
+    margin-top: 0;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+
+  .contentHeader {
+    padding: 16px 20px;
+    gap: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    flex-wrap: wrap;
+  }
+
+  .contentIcon {
+    font-size: 2rem;
+  }
+
+  .contentHeader h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .contentBody {
+    padding: 16px 20px;
+  }
+
+  /* ===== Общие карточки и блоки ===== */
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .infoCard {
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #f8fafc;
+    border-left: 4px solid #3b82f6;
+  }
+
+  .infoCard.warning {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
+  }
+
+  .infoCard h3 {
+    font-size: 1rem;
+    margin: 0 0 8px 0;
+  }
+
+  .infoCard p {
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+    color: #475569;
+  }
+
+  .diagramCard {
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .diagramCard svg {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    display: block;
+  }
+
+  .diagramCaption {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 8px 0 0 0;
+    font-style: italic;
+  }
+
+  /* ===== Таблицы с горизонтальным скроллом ===== */
+  .dataTable {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .dataTable table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .dataTable th,
+  .dataTable td {
+    white-space: nowrap;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .dataTable th {
+    background: #f1f5f9;
+    font-weight: 600;
+    position: sticky;
+    left: 0;
+  }
+
+  .dataTable tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Цветные индикаторы в таблицах */
+  .colorSwatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* ===== Калькуляторы ===== */
+  .calculatorCard {
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .calculatorCard h3 {
+    font-size: 1.1rem;
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
+
+  .calcForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .formGroup label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #334155;
+  }
+
+  .formGroup input,
+  .formGroup select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: border-color 0.2s;
+  }
+
+  .formGroup input:focus,
+  .formGroup select:focus {
+    outline: none;
+    border-color: var(--primary-color-orange);
+    box-shadow: 0 0 0 3px var(--primary-color-orange);
+  }
+
+  .calcBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    background: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .calcBtn:hover {
+    background: #2563eb;
+  }
+
+  .calcBtn:active {
+    transform: scale(0.98);
+  }
+
+  .calcResult {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .calcStatus {
+    display: block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    font-size: 0.85rem;
+  }
+
+  /* ===== Сетка аббревиатур ===== */
+  .abbrevGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .abbrevItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 3px solid #3b82f6;
+  }
+
+  .abbrevTerm {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    min-width: 70px;
+  }
+
+  .abbrevDef {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  /* ===== Пустое состояние ===== */
+  .emptyState {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+  }
+
+  .emptyState svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+  }
+
+  .emptyState p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+/* ===== Очень маленькие экраны (до 480px) ===== */
+@media (max-width: 480px) {
+  .navBarCard {
+    min-width: 240px;
+    border-radius: 14px;
+  }
+
+  .userName {
+    display: none; /* скрываем имя на узких экранах */
+  }
+
+  .logoutBtn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .topBar {
+    padding: 6px 10px;
+  }
+
+  .sidePanel {
+    width: 92% !important;
+    max-width: 340px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .mainContentArea {
+    padding: 8px;
+  }
+
+  .contentBody {
+    padding: 14px 16px;
+  }
+
+  .contentHeader {
+    padding: 14px 16px;
+  }
+
+  .contentHeader h2 {
+    font-size: 1.15rem;
+  }
+
+  .infoCard,
+  .diagramCard,
+  .calculatorCard {
+    padding: 12px 14px;
+  }
+
+  .dataTable th,
+  .dataTable td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .abbrevItem {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .abbrevTerm {
+    min-width: 60px;
+    font-size: 0.9rem;
+  }
+
+  .abbrevDef {
+    font-size: 0.85rem;
+  }
+
+  .calcForm {
+    gap: 10px;
+  }
+
+  .formGroup input,
+  .formGroup select {
+    padding: 9px 10px;
+    font-size: 0.9rem;
+  }
+
+  .calcBtn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Дополнительные улучшения для тач-интерфейса ===== */
+@media (hover: none) and (pointer: coarse) {
+  .menuItem,
+  .sectionItem,
+  .calcBtn,
+  .closeBtn {
+    min-height: 44px; /* минимальная область нажатия для тача */
+    display: flex;
+    align-items: center;
+  }
+
+  .formGroup input,
+  .formGroup select {
+    min-height: 44px;
+  }
+}
