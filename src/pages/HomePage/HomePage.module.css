@@ -378,7 +378,9 @@ h2 {
 /* Планшеты (768px и выше) */
 @media (min-width: 768px) {
   .containerGlass {
+    max-width: 90vh;
     padding: 1rem 2rem;
+    
   }
 
   .containerGlass p {
