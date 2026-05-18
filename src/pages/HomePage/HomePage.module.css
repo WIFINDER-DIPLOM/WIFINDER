@@ -47,7 +47,7 @@
   align-items: end;
   justify-content: center;
   position: absolute;
-  width: auto;
+  width: 100%;
   max-width: 90vh;
   z-index: 11;
   top: 50%;
