@@ -29,7 +29,7 @@ const LoginPage = () => {
     <div className={styles.container}>
       <div className={styles.logoCont}>
         <img
-          src="./public/images/Logo.svg"
+          src="./images/Logo.svg"
           alt="LOGO"
           className={styles.logo}
         />
