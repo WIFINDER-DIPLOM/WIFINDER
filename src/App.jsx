@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -14,7 +14,7 @@ function PrivateRoute({ children }) {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
@@ -31,7 +31,7 @@ function App() {
 
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
