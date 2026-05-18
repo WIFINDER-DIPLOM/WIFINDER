@@ -31,7 +31,7 @@ const HomePage = () => {
         children={
           <img
             className={styles.imgNaLogin}
-            src="././public/images/iconamoon_profile.svg"
+            src="./images/iconamoon_profile.svg"
             alt=""
           />
         }
@@ -53,7 +53,7 @@ const HomePage = () => {
             muted
             playsInline
             loop
-            src="./public/video/Multi-Shot_Video_-_Cinematic_loopable_close-up_video,_static_Wi-Fi_router_with_two_antennas_in_the_c.mp4"
+            src="./video/Multi-Shot_Video_-_Cinematic_loopable_close-up_video,_static_Wi-Fi_router_with_two_antennas_in_the_c.mp4"
           ></video>
         </section>
       </div>

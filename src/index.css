@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Unbounded";
-  src: url("../src/assets/fonts/Unbounded/Unbounded-VariableFont_wght.ttf");
+  src: url("../public/fonts/Unbounded/Unbounded-VariableFont_wght.ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+  src: url("../public/fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
