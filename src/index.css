@@ -13,6 +13,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary-color-white: #F7F0F0;
   --primary-color-for-text: #1A1614;
