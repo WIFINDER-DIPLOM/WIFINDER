@@ -148,6 +148,7 @@
     min-width: 95%;
     border-radius: 20px;
     top: 0.5vh;
+    right: -2rem;
   }
 
   .buttonNav {
