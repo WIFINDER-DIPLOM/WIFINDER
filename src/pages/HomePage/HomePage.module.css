@@ -47,8 +47,8 @@
   align-items: end;
   justify-content: center;
   position: absolute;
-  width: auto;
-  max-width: 90vw;
+  width: 100%;
+  max-width: 130vh;
   z-index: 11;
   top: 50%;
   left: 50%;
@@ -195,6 +195,9 @@ h2 {
 
 .tabs {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 0;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 24px;
@@ -378,7 +381,9 @@ h2 {
 /* Планшеты (768px и выше) */
 @media (min-width: 768px) {
   .containerGlass {
+    
     padding: 1rem 2rem;
+    
   }
 
   .containerGlass p {
@@ -461,8 +466,8 @@ h2 {
 /* Стандартные телефоны (до 768px) — исправленная версия */
 @media (max-width: 768px) {
   .containerGlass {
+    max-width: 90vh;
     padding: 0.5rem 1rem;
-    width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;

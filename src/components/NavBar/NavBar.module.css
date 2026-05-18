@@ -55,6 +55,7 @@
 }
 
 .buttonNavLogin {
+  height: 3.5vh;
   padding: 0.3vh 1vh 0.3vh 1vh;
   border: solid 1px;
   background-color: transparent;
@@ -147,6 +148,7 @@
     min-width: 95%;
     border-radius: 20px;
     top: 0.5vh;
+    right: -2rem;
   }
 
   .buttonNav {

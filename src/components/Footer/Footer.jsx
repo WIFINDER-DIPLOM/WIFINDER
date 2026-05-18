@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.footerTop}>
               <div className={styles.footerBrand}>
                 <div className={styles.footerLogo}>
-                  <img src="../../public/images/Logo.svg" alt="logo" />
+                  <img src="./images/Logo.svg" alt="logo" />
                   <span className={styles.footerBrandName}>WIFINDER</span>
                 </div>
                 <span className={styles.footerTagline}>
