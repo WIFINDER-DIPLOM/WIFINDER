@@ -465,7 +465,6 @@ h2 {
   .containerGlass {
     max-width: 90vh;
     padding: 0.5rem 1rem;
-    width: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
