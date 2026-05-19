@@ -11,7 +11,7 @@ const ProfileEditModal = ({
   if (!isOpen) return null;
 
   return (
-    <div className={styles.modalOverlay} onClick={onClose}>
+    <div className={styles.modalOverlay}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <h3>Редактирование профиля</h3>
         <div className={styles.editForm}>
