@@ -14,8 +14,8 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  -webkit-user-select: none; 
-  -ms-user-select: none; 
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -64,4 +64,8 @@
   color: rgba(26, 22, 20, 0.6);
   margin-bottom: 40px;
   line-height: 1.5;
+}
+
+Button:hover {
+  background-color: rgba(232, 78, 15, 1);
 }

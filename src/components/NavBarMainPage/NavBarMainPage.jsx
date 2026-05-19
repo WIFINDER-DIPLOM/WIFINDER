@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./NavBarMainPage.module.css";
 import {
@@ -135,6 +135,15 @@ const NavBarMainPage = ({ userName }) => {
               >
                 <Icons.MoreDots />
               </motion.button>
+              <span onClick={() => navigate("/messenger")}>
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/ios-glyphs/30/FFFFFF/chat.png"
+                  alt="chat"
+                />
+              </span>
+
               <div
                 className={`${styles.userIcon} ${isExpanded ? styles.expandedUserIcon : styles.collapsedUserIcon}`}
               >

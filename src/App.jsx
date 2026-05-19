@@ -1,10 +1,10 @@
-
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import MainUserPage from "./pages/MainUserPage/MainUserPage";
+import MessengerPage from "./pages/MessangerPage/MessengerPage"
 import HomePage from "./pages/HomePage/HomePage";
 
 function PrivateRoute({ children }) {
@@ -18,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/messenger" element={<MessengerPage />} />
+        <Route path="/messenger/:chatId" element={<MessengerPage />} />
         <Route path="/404" element={<NotFoundPage />} />
 
         <Route
