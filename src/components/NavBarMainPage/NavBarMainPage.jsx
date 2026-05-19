@@ -135,7 +135,10 @@ const NavBarMainPage = ({ userName }) => {
               >
                 <Icons.MoreDots />
               </motion.button>
-              <span onClick={() => navigate("/messenger")}>
+              <span
+                onClick={() => navigate("/messenger")}
+                style={{ cursor: "pointer" }}
+              >
                 <img
                   width="30"
                   height="30"
