@@ -11,9 +11,26 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (login === "Владимир Румянцев" && password === "vova") {
+    const trimmedLogin = login.trim();
+    const trimmedPassword = password.trim();
+
+    if (!trimmedLogin) {
+      setError("Введите логин");
+      return;
+    }
+    if (!trimmedPassword) {
+      setError("Введите пароль");
+      return;
+    }
+
+    if (/\s/.test(trimmedLogin)) {
+      setError("Логин не должен содержать пробелов");
+      return;
+    }
+
+    if (trimmedLogin === "test" && trimmedPassword === "test") {
       localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("userLogin", login);
+      localStorage.setItem("userLogin", trimmedLogin);
       navigate("/main");
     } else {
       setError("Неверный логин или пароль");
@@ -28,11 +45,7 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logoCont}>
-        <img
-          src="./images/Logo.svg"
-          alt="LOGO"
-          className={styles.logo}
-        />
+        <img src="./images/Logo.svg" alt="LOGO" className={styles.logo} />
         <h1>WIFINDER</h1>
       </div>
 

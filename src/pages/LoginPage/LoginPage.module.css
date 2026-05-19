@@ -86,6 +86,14 @@ body {
   margin-top: 1rem;
   width: 100%;
 }
+.btnSubmit:hover {
+  background-color: var(--primary-color-orange);
+}
+
+.btnSubmit:focus {
+  background-color: var(--primary-color-orange);
+}
+
 
 .errorMsg {
   color: #c0392b;
@@ -178,9 +186,9 @@ body {
     padding: 16px;
   }
  .logoCont img{
-  position: absolute;
-  top: 18vh;
-  left: 20vh;
+    position: absolute;
+    top: 13vh;
+    left: 20vh;
  }
   .pageTitle {
     font-size: 24px;
