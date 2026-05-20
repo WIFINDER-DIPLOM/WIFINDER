@@ -9,14 +9,14 @@ const CableCalculator = ({ onCalculate }) => {
         <div className={styles.calcForm}>
           <div className={styles.formGroup}>
             <label>Скорость передачи</label>
-            <select id="cableSpeed">
+            <select id="cableSpeed" className={styles.cableSpeed}>
               <option value="100">100 Мбит/с</option>
               <option value="1000" selected>1 Гбит/с</option>
               <option value="2500">2.5 Гбит/с</option>
               <option value="10000">10 Гбит/с</option>
             </select>
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles.formGroup} >
             <label>Кол-во коннекторов (по 0.5 м потерь)</label>
             <input
               type="number"
@@ -24,9 +24,10 @@ const CableCalculator = ({ onCalculate }) => {
               defaultValue="4"
               min="2"
               max="10"
+              className={styles.cableConnectors}
             />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles.formGroup} >
             <label>Кол-во патч-панелей (по 1 м потерь)</label>
             <input
               type="number"
@@ -34,6 +35,7 @@ const CableCalculator = ({ onCalculate }) => {
               defaultValue="2"
               min="1"
               max="6"
+              className={styles.cablePanels}
             />
           </div>
         </div>

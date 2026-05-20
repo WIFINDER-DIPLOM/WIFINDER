@@ -14,15 +14,18 @@ const BatteryCalculator = ({ onCalculate }) => {
               id="batteryCurrent"
               step="0.01"
               placeholder="0.15"
+              className={styles.batteryCurrent}
             />
           </div>
-          <div className={styles.formGroup}>
+          <div className={styles.formGroup} style={{"marginTop" : ".5rem"}}>
             <label>Время резервирования (часов)</label>
             <input
               type="number"
               id="batteryHours"
               defaultValue="24"
               step="1"
+              className={styles.batteryHours}
+              
             />
           </div>
         </div>

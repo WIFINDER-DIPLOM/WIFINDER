@@ -142,7 +142,19 @@ const NavBarMainPage = ({ userName }) => {
                 <img
                   width="30"
                   height="30"
-                  src="https://img.icons8.com/ios-glyphs/30/FFFFFF/chat.png"
+                  src="../../public/images/chatWhite.png"
+                  alt="chat"
+                />
+              </span>
+
+              <span
+                onClick={() => navigate("/documents")}
+                style={{ cursor: "pointer" }}
+              >
+                <img
+                  width="30"
+                  height="30"
+                  src="../../public/images/documentsWhite.png"
                   alt="chat"
                 />
               </span>
