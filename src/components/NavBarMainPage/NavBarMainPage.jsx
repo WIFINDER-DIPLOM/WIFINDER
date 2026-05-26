@@ -142,7 +142,7 @@ const NavBarMainPage = ({ userName }) => {
                 <img
                   width="30"
                   height="30"
-                  src=".images/chatWhite.png"
+                  src="./images/chatWhite.png"
                   alt="chat"
                 />
               </span>
