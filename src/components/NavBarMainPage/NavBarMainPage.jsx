@@ -142,7 +142,7 @@ const NavBarMainPage = ({ userName }) => {
                 <img
                   width="30"
                   height="30"
-                  src="../public/images/chatWhite.png"
+                  src=".images/chatWhite.png"
                   alt="chat"
                 />
               </span>
@@ -154,7 +154,7 @@ const NavBarMainPage = ({ userName }) => {
                 <img
                   width="30"
                   height="30"
-                  src="../public/images/documentsWhite.png"
+                  src="./images/documentsWhite.png"
                   alt="chat"
                 />
               </span>
