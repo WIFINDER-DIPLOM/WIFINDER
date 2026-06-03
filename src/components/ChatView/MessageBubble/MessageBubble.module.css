@@ -33,11 +33,11 @@
   font-size: 15px;
 }
 .outgoing .message-bubble {
-  background: #2b5278;
+  background: var(--primary-color-orange);
   border-bottom-right-radius: 4px;
 }
 .incoming .message-bubble {
-  background: #182533;
+  background: var(--primary-color-orange);
   border-bottom-left-radius: 4px;
 }
 
@@ -92,7 +92,7 @@
 .message-status svg {
   width: 16px;
   height: 16px;
-  fill: #6c7883;
+  fill: var(--primary-color-white);
 }
 .message-status.read svg {
   fill: #4dcd5e;

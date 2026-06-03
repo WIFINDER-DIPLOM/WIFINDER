@@ -25,6 +25,8 @@
   gap: 12px;
   min-height: 56px;
 }
+
+
 .sidebar-back {
   width: 40px;
   height: 40px;
@@ -52,7 +54,7 @@
 .sidebar-search input {
   width: 100%;
   padding: 10px 16px 10px 40px;
-  background: #242f3d;
+  background: var(--primary-color-white);
   border: none;
   border-radius: 22px;
   color: #e7e9ea;
@@ -61,7 +63,10 @@
   transition: background 0.2s;
 }
 .sidebar-search input:focus {
-  background: #2b3847;
+  background: var(--primary-color-orange);
+}
+.sidebar-search input:focus::placeholder {
+  color: var(--primary-color-white);
 }
 .sidebar-search input::placeholder {
   color: #6c7883;
@@ -161,7 +166,7 @@
 }
 .chat-item-name {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: normal;
   color: var(--primary-color-for-text);
   white-space: nowrap;
   overflow: hidden;
