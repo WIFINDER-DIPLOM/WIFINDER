@@ -26,6 +26,10 @@
   --primary-color-for-text: #1A1614;
   --primary-color-orange: #E84E0F;
   --primary-color-orange-a-50: rgba(232, 78, 15, .3);
+  --primary: #e84e0f;
+  --primary-transparent: rgba(232, 78, 15, 0.3);
+  --dark: #1a1614;
+  --light: #f7f0f0;
 }
 
 html, body, #root {
@@ -38,3 +42,4 @@ html, body, #root {
   background: var(--primary-color-orange);
   color: var(--primary-color-white);
 }
+

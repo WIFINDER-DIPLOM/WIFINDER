@@ -148,7 +148,9 @@ const NavBarMainPage = ({ userName }) => {
               </span>
 
               <span
-                onClick={() => navigate("/documents")}
+                onClick={() => {
+                  window.open("/#/documents", "_blank", "noopener,noreferrer");
+                }}
                 style={{ cursor: "pointer" }}
               >
                 <img

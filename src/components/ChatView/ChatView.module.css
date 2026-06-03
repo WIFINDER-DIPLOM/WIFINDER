@@ -150,8 +150,11 @@
   padding: 0 12px;
   min-height: 42px;
   transition: background 0.2s;
-  border: 2px solid var(--primary-color-orange);
+  border: 2px solid ;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px var(--primary-transparent) !important;
 }
+
 
 .message-input {
   flex: 1;

@@ -65,7 +65,8 @@
 }
 
 .sidebar-search input:focus {
-  border: 2px solid var(--primary-color-orange);
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px var(--primary-transparent) !important;
 }
 .sidebar-search input::placeholder {
   color: #6c7883;
