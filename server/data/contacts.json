@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "Алексей Петров", "avatar": "./images/iconamoon_profile.svg", "lastSeen": "был в 12:45", "online": false, "isGroup": false },
+  { "id": 2, "name": "Мария Сидорова", "avatar": "./images/iconamoon_profile.svg", "lastSeen": "онлайн", "online": true, "isGroup": false },
+  { "id": 3, "name": "Рабочий чат", "avatar": "./images/iconamoon_profile.svg", "lastSeen": "5 участников", "online": false, "isGroup": true },
+  { "id": 4, "name": "Елена Козлова", "avatar": "./images/iconamoon_profile.svg", "lastSeen": "была вчера", "online": false, "isGroup": false },
+  { "id": 5, "name": "Дмитрий Волков", "avatar": "./images/iconamoon_profile.svg", "lastSeen": "онлайн", "online": true, "isGroup": false },
+  { "id": 6, "name": "Анна Краснова", "avatar": "./images/iconamoon_profile.svg", "lastSeen": "была в 10:30", "online": false, "isGroup": false }
+]

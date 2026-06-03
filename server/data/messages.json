@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1780474832265,
+    "chatId": 4,
+    "senderId": 0,
+    "text": "1",
+    "replyTo": null,
+    "timestamp": "2026-06-03T08:20:32.265Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  },
+  {
+    "id": 1780475107608,
+    "chatId": 4,
+    "senderId": 0,
+    "text": "Test",
+    "replyTo": null,
+    "timestamp": "2026-06-03T08:25:07.608Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  },
+  {
+    "id": 1780475120849,
+    "chatId": 3,
+    "senderId": 0,
+    "text": "asdasdas",
+    "replyTo": null,
+    "timestamp": "2026-06-03T08:25:20.849Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  }
+]
