@@ -37,15 +37,11 @@ async function writeJSON(filePath, data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
 }
 
-// ====== API ENDPOINTS ======
-
-// Получить все контакты
 app.get('/api/contacts', async (req, res) => {
   const contacts = await readJSON(CONTACTS_FILE, []);
   res.json(contacts);
 });
 
-// Получить сообщения конкретного чата
 app.get('/api/messages/:chatId', async (req, res) => {
   const chatId = parseInt(req.params.chatId);
   const messages = await readJSON(MESSAGES_FILE, []);
@@ -53,7 +49,6 @@ app.get('/api/messages/:chatId', async (req, res) => {
   res.json(chatMessages);
 });
 
-// Отправить сообщение
 app.post('/api/messages', async (req, res) => {
   const messages = await readJSON(MESSAGES_FILE, []);
   const newMessage = {
@@ -70,7 +65,6 @@ app.post('/api/messages', async (req, res) => {
   res.status(201).json(newMessage);
 });
 
-// Удалить сообщение
 app.delete('/api/messages/:id', async (req, res) => {
   const id = parseInt(req.params.id);
   let messages = await readJSON(MESSAGES_FILE, []);
@@ -79,7 +73,6 @@ app.delete('/api/messages/:id', async (req, res) => {
   res.json({ success: true });
 });
 
-// Редактировать сообщение
 app.put('/api/messages/:id', async (req, res) => {
   const id = parseInt(req.params.id);
   const { text } = req.body;
@@ -95,7 +88,6 @@ app.put('/api/messages/:id', async (req, res) => {
   }
 });
 
-// Отметить сообщения чата как прочитанные
 app.post('/api/messages/read/:chatId', async (req, res) => {
   const chatId = parseInt(req.params.chatId);
   const CURRENT_USER_ID = 0;
@@ -140,5 +132,4 @@ app.post('/api/reactions', async (req, res) => {
 // ====== Запуск сервера ======
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
-  console.log(`📁 Data folder: ${DATA_DIR}`);
 });

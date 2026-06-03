@@ -152,14 +152,12 @@
   transition: background 0.2s;
   border: 2px solid var(--primary-color-orange);
 }
-.input-field-wrapper:focus-within {
-  background: var(--primary-color-orange);
-}
+
 .message-input {
   flex: 1;
   background: none;
   border: none;
-  color: #e7e9ea;
+  color: var(--primary-color-for-text);
   font-size: 15px;
   padding: 10px 12px;
   outline: none;
@@ -168,9 +166,7 @@
   font-family: inherit;
   line-height: 1.4;
 }
-.message-input:focus::placeholder {
-  color: var(--primary-color-white);
-}
+
 
 .emoji-btn {
   width: 32px;

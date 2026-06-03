@@ -38,23 +38,23 @@ export default function ChatView({ chatId }) {
     MockDB.markAsRead(chatId);
   }, [chatId]);
 
-  useEffect(() => {
-    if (contact && !contact.isGroup) {
-      let hideTimeout;
-      const timeout = setTimeout(
-        () => {
-          setTyping(true);
-          hideTimeout = setTimeout(() => setTyping(false), 3000);
-        },
-        2000 + Math.random() * 3000,
-      );
+  // useEffect(() => {
+  //   if (contact && !contact.isGroup) {
+  //     let hideTimeout;
+  //     const timeout = setTimeout(
+  //       () => {
+  //         setTyping(true);
+  //         hideTimeout = setTimeout(() => setTyping(false), 3000);
+  //       },
+  //       2000 + Math.random() * 3000,
+  //     );
 
-      return () => {
-        clearTimeout(timeout);
-        clearTimeout(hideTimeout);
-      };
-    }
-  }, [chatId, contact, chatMessages.length]);
+  //     return () => {
+  //       clearTimeout(timeout);
+  //       clearTimeout(hideTimeout);
+  //     };
+  //   }
+  // }, [chatId, contact, chatMessages.length]);
 
   const handleSend = useCallback(() => {
     if (!text.trim()) return;
