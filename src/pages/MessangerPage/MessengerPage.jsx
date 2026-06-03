@@ -100,7 +100,7 @@ const MessengerPage = () => {
           display: "flex",
           height: "100vh",
           overflow: "hidden",
-          background: "#0f1419",
+          
         }}
       >
         {loading && activeChat && <LoadingOverlay />}

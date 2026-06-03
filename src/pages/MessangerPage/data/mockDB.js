@@ -1,12 +1,14 @@
 export const CURRENT_USER_ID = 0;
 
+const tempAvatar = "./images/iconamoon_profile.svg"
+
 export const contacts = [
-  { id: 1, name: "Алексей Петров", avatar: "https://...", lastSeen: "был в 12:45", online: false, isGroup: false },
-  { id: 2, name: "Мария Сидорова", avatar: "https://...", lastSeen: "онлайн", online: true, isGroup: false },
-  { id: 3, name: "Рабочий чат", avatar: "https://...", lastSeen: "5 участников", online: false, isGroup: true },
-  { id: 4, name: "Елена Козлова", avatar: "https://...", lastSeen: "была вчера", online: false, isGroup: false },
-  { id: 5, name: "Дмитрий Волков", avatar: "https://...", lastSeen: "онлайн", online: true, isGroup: false },
-  { id: 6, name: "Анна Краснова", avatar: "https://...", lastSeen: "была в 10:30", online: false, isGroup: false },
+  { id: 1, name: "Алексей Петров", avatar: tempAvatar, lastSeen: "был в 12:45", online: false, isGroup: false },
+  { id: 2, name: "Мария Сидорова", avatar: tempAvatar, lastSeen: "онлайн", online: true, isGroup: false },
+  { id: 3, name: "Рабочий чат", avatar: tempAvatar, lastSeen: "5 участников", online: false, isGroup: true },
+  { id: 4, name: "Елена Козлова", avatar: tempAvatar, lastSeen: "была вчера", online: false, isGroup: false },
+  { id: 5, name: "Дмитрий Волков", avatar: tempAvatar, lastSeen: "онлайн", online: true, isGroup: false },
+  { id: 6, name: "Анна Краснова", avatar: tempAvatar, lastSeen: "была в 10:30", online: false, isGroup: false },
 ];
 
 export const seedMessages = [

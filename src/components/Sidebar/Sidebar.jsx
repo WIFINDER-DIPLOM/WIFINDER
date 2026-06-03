@@ -53,7 +53,7 @@ export default function Sidebar({ activeChat, onSelectChat, searchTerm, onSearch
                   <span className={styles['chat-item-preview']}>
                     {lastMsg && (
                       <>
-                        {lastMsg.senderId !== 0 && !contact.isGroup && <span className={styles.sender}>Вы: </span>}
+                        {lastMsg.senderId == 0 && !contact.isGroup && <span className={styles.sender}>Вы: </span>}
                         {lastMsg.isDeleted ? 'Сообщение удалено' : lastMsg.text}
                       </>
                     )}

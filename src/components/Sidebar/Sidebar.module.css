@@ -1,10 +1,10 @@
 .sidebar {
   width: 380px;
   min-width: 380px;
-  background: #17212b;
+  background: var(--primary-color-orange-a-50);
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #1f2936;
+  color: var(--primary-color-for-text);
   animation: sidebarSlide 0.3s ease-out;
 }
 @keyframes sidebarSlide {
@@ -23,7 +23,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #1f2936;
   min-height: 56px;
 }
 .sidebar-back {
@@ -38,7 +37,7 @@
   flex-shrink: 0;
 }
 .sidebar-back:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--primary-color-orange);
 }
 .sidebar-back svg {
   width: 24px;
@@ -105,12 +104,13 @@
   transition: background 0.15s;
   position: relative;
   gap: 12px;
+  color: var();
 }
 .chat-item:hover {
-  background: #202b36;
+  background: var(--primary-color-orange);
 }
 .chat-item.active {
-  background: #2b5278;
+  background: var(--primary-color-orange);
 }
 
 .chat-item-avatar {
@@ -135,7 +135,6 @@
   width: 14px;
   height: 14px;
   background: #4dcd5e;
-  border: 2px solid #17212b;
   border-radius: 50%;
   animation: onlinePulse 2s ease-in-out infinite;
 }
@@ -163,7 +162,7 @@
 .chat-item-name {
   font-size: 15px;
   font-weight: 600;
-  color: #e7e9ea;
+  color: var(--primary-color-for-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -175,7 +174,7 @@
   margin-left: 8px;
 }
 .active .chat-item-time {
-  color: #8ab7d4;
+  color: var(--primary-color-white);
 }
 .chat-item-bottom {
   display: flex;
@@ -184,7 +183,7 @@
 }
 .chat-item-preview {
   font-size: 14px;
-  color: #8a9ba8;
+  color: var(--primary-color-for-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
