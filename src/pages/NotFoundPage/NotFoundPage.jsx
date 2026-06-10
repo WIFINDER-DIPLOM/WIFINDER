@@ -1,4 +1,3 @@
-// NotFoundPage.jsx
 import React, { useEffect } from "react";
 import styles from "./NotFoundPage.module.css";
 import stylesBtn from "../../components/Buttons/MainButton/MainButton.module.css";
@@ -28,11 +27,7 @@ const NotFoundPage = () => {
           Возможно, она была удалена или вы ввели неверный адрес.
         </p>
 
-        <button
-          onClick={handleGoBack}
-          className={stylesBtn.Button}
-          
-        >
+        <button onClick={handleGoBack} className={stylesBtn.Button}>
           <svg
             width="16"
             height="16"

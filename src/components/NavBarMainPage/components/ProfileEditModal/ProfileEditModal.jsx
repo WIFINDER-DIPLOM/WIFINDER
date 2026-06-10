@@ -1,13 +1,7 @@
 import React from "react";
 import styles from "../../NavBarMainPage.module.css";
 
-const ProfileEditModal = ({
-  isOpen,
-  onClose,
-  form,
-  onChange,
-  onSave,
-}) => {
+const ProfileEditModal = ({ isOpen, onClose, form, onChange, onSave }) => {
   if (!isOpen) return null;
 
   return (

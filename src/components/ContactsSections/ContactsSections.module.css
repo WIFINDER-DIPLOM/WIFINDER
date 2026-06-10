@@ -1,8 +1,6 @@
-
 .containerMain {
   max-width: 100%;
   margin: 0 auto;
-
 }
 .section {
   margin-bottom: 64px;
@@ -49,13 +47,13 @@
   color: #e84d0f;
 }
 .contactMap {
-    margin-top: 1rem;
+  margin-top: 1rem;
   width: 100%;
 }
 
 iframe {
-    border-radius: 30px;
-    border: solid rgba(232, 78, 15, .2);
+  border-radius: 30px;
+  border: solid rgba(232, 78, 15, 0.2);
 }
 
 .partnersGrid {
@@ -91,7 +89,6 @@ iframe {
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
-  
 }
 .partnerCard:hover .partnerLogo {
   border-color: #d0d0d0;
@@ -112,7 +109,6 @@ iframe {
   align-items: center;
   justify-content: center;
 }
-
 
 @media (max-width: 640px) {
   .contactsGrid {

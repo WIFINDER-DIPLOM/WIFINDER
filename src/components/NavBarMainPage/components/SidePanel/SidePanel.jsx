@@ -6,7 +6,7 @@ import { Icons } from "../../NavBarMainPage.constants";
 const SidePanel = ({
   isOpen,
   onClose,
-  onToggle,  // ← добавили проп для переключения
+  onToggle,
   activeMenuItem,
   sections,
   onSelectSection,
@@ -41,7 +41,11 @@ const SidePanel = ({
         <div className={styles.sidePanel}>
           <div className={styles.sidePanelHeader}>
             <h3>{activeMenuItem?.label || "Разделы"}</h3>
-            <button onClick={onClose} className={styles.closeBtn} title="Закрыть">
+            <button
+              onClick={onClose}
+              className={styles.closeBtn}
+              title="Закрыть"
+            >
               <Icons.Close />
             </button>
           </div>
@@ -51,7 +55,10 @@ const SidePanel = ({
                 key={section.id}
                 className={`${styles.sectionItem} ${section.active ? styles.activeSection : ""}`}
                 onClick={() => onSelectSection(section)}
-                whileHover={{ x: 4, backgroundColor: "rgba(59, 130, 246, 0.08)" }}
+                whileHover={{
+                  x: 4,
+                  backgroundColor: "rgba(59, 130, 246, 0.08)",
+                }}
               >
                 <div className={styles.sectionIcon}>{section.icon}</div>
                 <div className={styles.sectionInfo}>

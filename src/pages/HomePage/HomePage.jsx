@@ -53,7 +53,7 @@ const HomePage = () => {
             muted
             playsInline
             loop
-            src="./video/Multi-Shot_Video_-_Cinematic_loopable_close-up_video,_static_Wi-Fi_router_with_two_antennas_in_the_c.mp4"
+            src="./video/video_1.mp4"
           ></video>
         </section>
       </div>
@@ -384,13 +384,12 @@ const HomePage = () => {
                 fill="#e84d0f96"
               />
             </svg>
-              
+
             <ContactsSections />
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </div>
-      
     </>
   );
 };

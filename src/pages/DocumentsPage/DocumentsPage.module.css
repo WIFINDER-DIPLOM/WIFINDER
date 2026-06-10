@@ -18,7 +18,6 @@
   }
 }
 
-/* ===== Root ===== */
 .root {
   font-family:
     "Inter",
@@ -32,7 +31,6 @@
   padding: 0;
 }
 
-/* ===== Header ===== */
 .header {
   background: var(--dark);
   color: var(--light);
@@ -82,7 +80,6 @@
   color: var(--light) !important;
 }
 
-/* ===== Hero ===== */
 .hero {
   padding: 56px 40px 40px;
   max-width: 1280px;
@@ -105,7 +102,6 @@
   line-height: 1.6;
 }
 
-/* ===== Toolbar ===== */
 .toolbar {
   padding: 0 40px 24px;
   max-width: 1280px;
@@ -186,7 +182,7 @@
   box-shadow: 0 4px 14px var(--primary-transparent);
 }
 
-/* ===== Grid ===== */
+
 .grid {
   padding: 0 40px 80px;
   max-width: 1280px;
@@ -196,7 +192,6 @@
   gap: 24px;
 }
 
-/* ===== Card ===== */
 .card {
   background: #fff;
   border-radius: 16px;
@@ -325,7 +320,6 @@
   color: var(--primary);
 }
 
-/* ===== Modal ===== */
 .modal {
   position: fixed;
   inset: 0;
@@ -473,7 +467,6 @@
   cursor: pointer;
 }
 
-/* ===== Notification ===== */
 .notification {
   position: fixed;
   bottom: 28px;
@@ -497,7 +490,6 @@
   font-weight: 700;
 }
 
-/* ===== Empty state ===== */
 .empty {
   padding: 60px 20px;
   text-align: center;

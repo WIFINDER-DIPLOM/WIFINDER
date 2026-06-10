@@ -1,6 +1,6 @@
 export const CURRENT_USER_ID = 0;
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 export const MockDB = {
   getContacts: async () => {
@@ -15,8 +15,8 @@ export const MockDB = {
 
   sendMessage: async (msg) => {
     const res = await fetch(`${API_BASE}/messages`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(msg),
     });
     return res.json();
@@ -24,15 +24,15 @@ export const MockDB = {
 
   deleteMessage: async (id) => {
     const res = await fetch(`${API_BASE}/messages/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     });
     return res.json();
   },
 
   editMessage: async (id, text) => {
     const res = await fetch(`${API_BASE}/messages/${id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text }),
     });
     return res.json();
@@ -40,7 +40,7 @@ export const MockDB = {
 
   markAsRead: async (chatId) => {
     const res = await fetch(`${API_BASE}/messages/read/${chatId}`, {
-      method: 'POST',
+      method: "POST",
     });
     return res.json();
   },
@@ -52,8 +52,8 @@ export const MockDB = {
 
   addReaction: async (messageId, emoji) => {
     const res = await fetch(`${API_BASE}/reactions`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ messageId, emoji, userId: CURRENT_USER_ID }),
     });
     return res.json();

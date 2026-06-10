@@ -3,7 +3,6 @@
   margin: 2px 0;
   animation: msgSlide 0.3s ease-out;
   position: relative;
-  
 }
 @keyframes msgSlide {
   from {

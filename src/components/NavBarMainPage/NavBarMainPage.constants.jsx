@@ -1,4 +1,3 @@
-// NavBarMainPage.constants.js
 import React from "react";
 
 export const Icons = {

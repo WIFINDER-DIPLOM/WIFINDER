@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../DocumentsPage.module.css';
+import React from "react";
+import styles from "../../DocumentsPage.module.css";
 
 export default function Notification({ message }) {
   return (

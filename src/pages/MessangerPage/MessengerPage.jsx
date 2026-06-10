@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ChatView from "../../components/ChatView/ChatView";
 import LoadingOverlay from "../../components/LoadingOverlay/LoadingOverlay";
-import EmptyChat from "../../components/ChatView/EmptyChat/EmptyChat"
+import EmptyChat from "../../components/ChatView/EmptyChat/EmptyChat";
 import { MessengerContext } from "./context/MessengerContext";
 import { MockDB, CURRENT_USER_ID } from "./data/mockDB";
 
@@ -100,7 +100,6 @@ const MessengerPage = () => {
           display: "flex",
           height: "100vh",
           overflow: "hidden",
-          
         }}
       >
         {loading && activeChat && <LoadingOverlay />}

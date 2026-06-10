@@ -45,7 +45,7 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logoCont}>
-        <img src="./images/Logo.svg" alt="LOGO" className={styles.logo} />
+        <img src="./images/logo.svg" alt="LOGO" className={styles.logo} />
         <h1>WIFINDER</h1>
       </div>
 

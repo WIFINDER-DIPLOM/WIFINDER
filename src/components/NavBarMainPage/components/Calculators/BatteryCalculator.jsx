@@ -17,7 +17,7 @@ const BatteryCalculator = ({ onCalculate }) => {
               className={styles.batteryCurrent}
             />
           </div>
-          <div className={styles.formGroup} style={{"marginTop" : ".5rem"}}>
+          <div className={styles.formGroup} style={{ marginTop: ".5rem" }}>
             <label>Время резервирования (часов)</label>
             <input
               type="number"
@@ -25,7 +25,6 @@ const BatteryCalculator = ({ onCalculate }) => {
               defaultValue="24"
               step="1"
               className={styles.batteryHours}
-              
             />
           </div>
         </div>

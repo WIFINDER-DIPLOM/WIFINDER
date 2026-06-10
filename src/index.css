@@ -22,17 +22,25 @@
 }
 
 :root {
-  --primary-color-white: #F7F0F0;
-  --primary-color-for-text: #1A1614;
-  --primary-color-orange: #E84E0F;
-  --primary-color-orange-a-50: rgba(232, 78, 15, .3);
+  --primary-color-white: #f7f0f0;
+  --primary-color-for-text: #1a1614;
+  --primary-color-orange: #e84e0f;
+  --primary-color-orange-a-50: rgba(232, 78, 15, 0.3);
+  --primary-color-orange-gradient: linear-gradient(
+    90deg,
+    #f0a88a,
+    #e89070,
+    #f0a88a
+  );
   --primary: #e84e0f;
   --primary-transparent: rgba(232, 78, 15, 0.3);
   --dark: #1a1614;
   --light: #f7f0f0;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   background: var(--primary-color-white);
@@ -42,4 +50,3 @@ html, body, #root {
   background: var(--primary-color-orange);
   color: var(--primary-color-white);
 }
-

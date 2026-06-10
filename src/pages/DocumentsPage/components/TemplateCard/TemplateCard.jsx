@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../DocumentsPage.module.css';
+import React from "react";
+import styles from "../../DocumentsPage.module.css";
 
 export default function TemplateCard({
   template,
@@ -10,11 +10,7 @@ export default function TemplateCard({
   onSelect,
 }) {
   const tagsWord =
-    template.tags.length === 1
-      ? ''
-      : template.tags.length < 5
-      ? 'а'
-      : 'ов';
+    template.tags.length === 1 ? "" : template.tags.length < 5 ? "а" : "ов";
 
   return (
     <article
@@ -29,14 +25,14 @@ export default function TemplateCard({
         loading="lazy"
       />
       <button
-        className={`${styles.favBtn} ${isFavorite ? styles.favBtnActive : ''}`}
+        className={`${styles.favBtn} ${isFavorite ? styles.favBtnActive : ""}`}
         onClick={(e) => {
           e.stopPropagation();
           onToggleFavorite(template.id);
         }}
         aria-label="В избранное"
       >
-        {isFavorite ? '♥' : '♡'}
+        {isFavorite ? "♥" : "♡"}
       </button>
       <div className={styles.cardBody}>
         <span className={styles.sectionBadge}>{template.section}</span>

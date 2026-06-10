@@ -9,9 +9,14 @@ const VoltageDropCalculator = ({ onCalculate }) => {
         <div className={styles.calcForm}>
           <div className={styles.formGroup}>
             <label>Длина линии (м)</label>
-            <input type="number" id="dropLength" placeholder="200" className={styles.dropLength}/>
+            <input
+              type="number"
+              id="dropLength"
+              placeholder="200"
+              className={styles.dropLength}
+            />
           </div>
-          <div className={styles.formGroup} style={{"marginTop" : "1rem"}}>
+          <div className={styles.formGroup} style={{ marginTop: "1rem" }}>
             <label>Ток нагрузки (А)</label>
             <input
               type="number"

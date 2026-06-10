@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../DocumentsPage.module.css';
+import React from "react";
+import styles from "../../DocumentsPage.module.css";
 
 export default function TemplateModal({
   template,
@@ -10,11 +10,10 @@ export default function TemplateModal({
 }) {
   return (
     <div className={styles.modal} onClick={onClose}>
-      <div
-        className={styles.modalContent}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button className={styles.closeBtn} onClick={onClose}>✕</button>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeBtn} onClick={onClose}>
+          ✕
+        </button>
         <img
           src={template.image}
           alt={template.title}
@@ -52,7 +51,7 @@ export default function TemplateModal({
               Использовать шаблон
             </button>
             <button className={styles.btnSecondary} onClick={onToggleFavorite}>
-              {isFavorite ? 'В избранном' : 'В избранное'}
+              {isFavorite ? "В избранном" : "В избранное"}
             </button>
           </div>
         </div>

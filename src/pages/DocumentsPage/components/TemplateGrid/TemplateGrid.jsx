@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from '../../DocumentsPage.module.css';
-import TemplateCard from '../TemplateCard/TemplateCard';
+import React from "react";
+import styles from "../../DocumentsPage.module.css";
+import TemplateCard from "../TemplateCard/TemplateCard";
 
 export default function TemplateGrid({
   templates,
@@ -15,7 +15,9 @@ export default function TemplateGrid({
         <div className={styles.empty}>
           <div className={styles.emptyIcon}></div>
           <div className={styles.emptyTitle}>Ничего не найдено</div>
-          <div className={styles.emptyText}>Попробуйте изменить параметры поиска</div>
+          <div className={styles.emptyText}>
+            Попробуйте изменить параметры поиска
+          </div>
         </div>
       </div>
     );

@@ -103,19 +103,19 @@
     transform: scale(1);
     /* background-color: var(--primary-color-orange); */
     border-radius: 20px;
-    padding: .5rem;
+    padding: 0.5rem;
   }
   50% {
     transform: scale(1.2);
     /* background-color: var(--primary-color-orange); */
     border-radius: 20px;
-    padding: .5rem;
+    padding: 0.5rem;
   }
   100% {
     transform: scale(1);
     /* background-color: var(--primary-color-orange); */
     border-radius: 20px;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 

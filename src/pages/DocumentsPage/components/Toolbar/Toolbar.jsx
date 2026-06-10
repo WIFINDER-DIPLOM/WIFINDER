@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../DocumentsPage.module.css';
+import React from "react";
+import styles from "../../DocumentsPage.module.css";
 
 export default function Toolbar({
   searchQuery,
@@ -24,7 +24,7 @@ export default function Toolbar({
         {sections.map((s) => (
           <button
             key={s}
-            className={`${styles.tab} ${activeSection === s ? styles.tabActive : ''}`}
+            className={`${styles.tab} ${activeSection === s ? styles.tabActive : ""}`}
             onClick={() => setActiveSection(s)}
           >
             {s}

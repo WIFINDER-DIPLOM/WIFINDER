@@ -85,7 +85,7 @@
   width: 37px;
   padding-left: 0.5vh;
 }
-/* Мобильные устройства (до 768px) */
+
 @media (max-width: 768px) {
   .container {
     top: 1vh;
@@ -141,7 +141,6 @@
   }
 }
 
-/* Очень маленькие телефоны (до 480px) */
 @media (max-width: 480px) {
   .container {
     max-width: 98%;
@@ -178,7 +177,6 @@
   }
 }
 
-/* Горизонтальная ориентация на мобильных */
 @media (max-width: 768px) and (orientation: landscape) {
   .container {
     max-width: 85%;
@@ -201,4 +199,3 @@
     font-size: 11pt;
   }
 }
-
