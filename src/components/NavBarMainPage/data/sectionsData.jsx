@@ -805,7 +805,7 @@ export const getSectionsData = (
             { term: "PoE", def: "Power over Ethernet" },
           ].map((ab) => (
             <div key={ab.term} className={styles.abbrevItem}>
-              <span className={styles.abbrevTerm}>{ab.term}</span>
+              <span className={styles.abbrevTerm}>{ab.term} - </span>
               <span className={styles.abbrevDef}>{ab.def}</span>
             </div>
           ))}
