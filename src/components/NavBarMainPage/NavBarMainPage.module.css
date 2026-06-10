@@ -1,18 +1,17 @@
-/* Основной контейнер */
-/* .appContainer {
+.appContainer {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background: #f8fafc;
-} */
 
-/* .navBarWrapper {
+}
+
+.navBarWrapper {
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  z-index: 100;
-} */
+  z-index: 1000;
+} 
 
 .navBarContainer {
   position: fixed;
@@ -617,12 +616,12 @@ moreDotsBtn:hover {
 
 @media (max-width: 768px) {
   .sidePanelTab {
-    top: auto;
+    top: 55vh;
     bottom: 24px;
     transform: none;
-    border-radius: 10px 10px 0 0;
     flex-direction: row;
     width: auto;
+    height: 5vh;
     padding: 10px 16px;
   }
   
@@ -633,11 +632,11 @@ moreDotsBtn:hover {
 }
 
 @media (max-width: 768px) {
-  /* ===== Навбар ===== */
   .navBarContainer {
     width: 100%;
     z-index: 1000000;
     background-color: transparent;
+    background: linear-gradient(90deg, #f0a88a 0%, #e89070 50%, #f0a88a 100%);
   }
 
   .navBarCard {
@@ -659,7 +658,7 @@ moreDotsBtn:hover {
     padding: 6px 14px;
     font-size: 13px;
     width: 7rem;
-    height: 3rem;
+    height: 3vh;
   }
 
   .moreDotsBtn {
@@ -688,11 +687,10 @@ moreDotsBtn:hover {
     font-size: 14px;
   }
 
-  /* ===== Контейнер контента ===== */
   .contentWrapper {
     flex-direction: column;
     margin-left: 0 !important;
-    margin-top: 72px; /* отступ под фиксированный навбар */
+    margin-top: 72px;
     min-height: calc(100vh - 72px);
   }
 
@@ -708,7 +706,7 @@ moreDotsBtn:hover {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    z-index: 1000000;
+    z-index: 100;
   }
 
   .sidePanel {

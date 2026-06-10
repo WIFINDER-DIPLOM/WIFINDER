@@ -121,6 +121,7 @@
   gap: 8px;
 }
 .input-btn {
+  padding: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -161,7 +162,7 @@
   background: none;
   border: none;
   color: var(--primary-color-for-text);
-  font-size: 15px;
+  font-size: 12px;
   padding: 10px 12px;
   outline: none;
   resize: none;

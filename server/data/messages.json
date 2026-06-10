@@ -20,5 +20,27 @@
     "status": "sent",
     "isRead": false,
     "isEdited": false
+  },
+  {
+    "id": 1781077524779,
+    "chatId": 5,
+    "senderId": 0,
+    "text": "asdsa",
+    "replyTo": null,
+    "timestamp": "2026-06-10T07:45:24.779Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  },
+  {
+    "id": 1781078796469,
+    "chatId": 6,
+    "senderId": 0,
+    "text": "123",
+    "replyTo": null,
+    "timestamp": "2026-06-10T08:06:36.469Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
   }
 ]
