@@ -142,4 +142,7 @@
   .footerBrandName {
     font-size: 28px;
   }
+  .footerCopy {
+    text-align: justify;
+  }
 }
