@@ -229,6 +229,7 @@
 
 .toggle-btn {
   position: fixed;
+  padding: 0;
   top: 12px;
   right: 12px;
   z-index: 10000;
