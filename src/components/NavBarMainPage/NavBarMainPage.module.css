@@ -223,6 +223,15 @@ moreDotsBtn:hover {
   color: #fff;
 }
 
+.expandedDotsBtn circle{
+  fill: #fff;
+  transition: all .8s ease;
+}
+
+.expandedDotsBtn:hover circle{
+  fill: black;
+}
+
 .collapsedDotsBtn {
   background: rgba(255, 255, 255, 0.9);
   color: #e85d26;
@@ -669,6 +678,9 @@ moreDotsBtn:hover {
     height: 36px;
   }
 
+  button:hover {
+    background-color: var(--primary-color-white);
+  }
   .menuItemsContainer {
     padding: 8px 4px;
   }

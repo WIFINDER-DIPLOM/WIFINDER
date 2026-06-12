@@ -16,9 +16,9 @@ export const Icons = {
   ),
   MoreDots: () => (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <circle cx="5" cy="10" r="1.5" fill="currentColor" />
-      <circle cx="10" cy="10" r="1.5" fill="currentColor" />
-      <circle cx="15" cy="10" r="1.5" fill="currentColor" />
+      <circle cx="4" cy="10" r="2" fill="currentColor" />
+      <circle cx="10.5" cy="10" r="2" fill="currentColor" />
+      <circle cx="16.8" cy="10" r="2" fill="currentColor" />
     </svg>
   ),
   ChevronRight: () => (
