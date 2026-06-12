@@ -92,7 +92,7 @@ const TEMPLATES = [
   },
 ];
 
-const SECTIONS = ["Все", "Договоры", "Отчёты", "Заявления", "Акты"];
+const SECTIONS = ["Все", "Договоры", "Отчёты", "Заявления", "Акты", "Избранное"];
 
 export default function DocumentsPage() {
   const [activeSection, setActiveSection] = useState("Все");
@@ -160,6 +160,8 @@ export default function DocumentsPage() {
         activeSection={activeSection}
         setActiveSection={setActiveSection}
         sections={SECTIONS}
+        favorites={favorites}
+        favoritesCount={favorites.length}
       />
       <TemplateGrid
         templates={filteredTemplates}

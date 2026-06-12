@@ -33,17 +33,23 @@
 
 .header {
   background: var(--dark);
-  color: var(--light);
-  padding: 24px 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  align-self: center;
+  justify-self: center;
+  height: 6vh;
+  width: 100vh;
+  justify-content: center;
+  margin-top: 1rem;
   flex-wrap: wrap;
   gap: 16px;
+  border-radius: 3rem 3rem 3rem 3rem;
 }
 
 .logo {
   display: flex;
+  align-items: center;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   font-size: 22px;
@@ -300,7 +306,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(247, 240, 240, 0.95);
+  background: var(--primary-color-white);
   border: none;
   cursor: pointer;
   display: flex;
@@ -318,6 +324,10 @@
 }
 .favBtnActive {
   color: var(--primary);
+}
+
+Button:hover {
+  background-color: var(--primary-color-white);
 }
 
 .modal {

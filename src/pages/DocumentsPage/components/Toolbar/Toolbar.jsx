@@ -7,6 +7,8 @@ export default function Toolbar({
   activeSection,
   setActiveSection,
   sections,
+  favorites,
+  favoritesCount,
 }) {
   return (
     <div className={styles.toolbar}>
@@ -27,7 +29,7 @@ export default function Toolbar({
             className={`${styles.tab} ${activeSection === s ? styles.tabActive : ""}`}
             onClick={() => setActiveSection(s)}
           >
-            {s}
+            {s === "Избранное" ?  `${s} (${favoritesCount})` : s}
           </button>
         ))}
       </div>
