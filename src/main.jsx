@@ -8,6 +8,7 @@ import MainUserPage from "./pages/MainUserPage/MainUserPage";
 import MessengerPage from "./pages/MessangerPage/MessengerPage";
 import HomePage from "./pages/HomePage/HomePage";
 import DocumentsPage from "./pages/DocumentsPage/DocumentsPage";
+import SecretPage from "./pages/SecretPage/SecretPage";
 
 import "./index.css";
 
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/messenger" element={<MessengerPage />} />
         <Route path="/messenger/:chatId" element={<MessengerPage />} />
         <Route path="/documents" element={<DocumentsPage />} />
+        <Route path="/secret" element={<SecretPage />} />
 
         <Route path="/404" element={<NotFoundPage />} />
 
