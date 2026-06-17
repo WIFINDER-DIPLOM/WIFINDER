@@ -28,7 +28,7 @@ const LoginPage = () => {
       return;
     }
 
-    if (trimmedLogin === "test" && trimmedPassword === "test") {
+    if (trimmedLogin === "Владимир Румянцев" && trimmedPassword === "123") {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("userLogin", trimmedLogin);
       navigate("/main");
