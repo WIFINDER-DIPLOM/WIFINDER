@@ -1,4 +1,3 @@
-// NavBarMainPage.constants.js
 import React from "react";
 
 export const Icons = {
@@ -17,9 +16,23 @@ export const Icons = {
   ),
   MoreDots: () => (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <circle cx="5" cy="10" r="1.5" fill="currentColor" />
-      <circle cx="10" cy="10" r="1.5" fill="currentColor" />
-      <circle cx="15" cy="10" r="1.5" fill="currentColor" />
+      <circle cx="4" cy="10" r="2" fill="currentColor" />
+      <circle cx="10.5" cy="10" r="2" fill="currentColor" />
+      <circle cx="16.8" cy="10" r="2" fill="currentColor" />
+    </svg>
+  ),
+  ChevronRight: () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M8 4l6 6-6 6" />
     </svg>
   ),
   User: () => (
@@ -35,7 +48,7 @@ export const Icons = {
       <path d="M5 23c0-4.418 3.582-8 8-8s8 3.582 8 8" />
     </svg>
   ),
-  
+
   // Иконки для пунктов меню (основные)
   Video: () => (
     <svg
@@ -270,9 +283,9 @@ export const menuVariants = {
 export const menuItemVariants = {
   hidden: { opacity: 0, x: -20 },
   visible: (index) => ({
-    opacity: 1, 
+    opacity: 1,
     x: 0,
-    transition: { delay: index * 0.03 }
+    transition: { delay: index * 0.03 },
   }),
   exit: { opacity: 0, x: -20 },
 };

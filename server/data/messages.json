@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1781474820236,
+    "chatId": 2,
+    "senderId": 0,
+    "text": "🔥",
+    "replyTo": null,
+    "timestamp": "2026-06-14T22:07:00.236Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  },
+  {
+    "id": 1781474825207,
+    "chatId": 1,
+    "senderId": 0,
+    "text": "😢😢😢😢",
+    "replyTo": null,
+    "timestamp": "2026-06-14T22:07:05.207Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  },
+  {
+    "id": 1781474842726,
+    "chatId": 3,
+    "senderId": 0,
+    "text": "Принято в работу!",
+    "replyTo": null,
+    "timestamp": "2026-06-14T22:07:22.726Z",
+    "status": "sent",
+    "isRead": false,
+    "isEdited": false
+  }
+]

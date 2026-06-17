@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.footerTop}>
               <div className={styles.footerBrand}>
                 <div className={styles.footerLogo}>
-                  <img src="../../public/images/Logo.svg" alt="logo" />
+                  <img src="./images/logo.svg" alt="logo" />
                   <span className={styles.footerBrandName}>WIFINDER</span>
                 </div>
                 <span className={styles.footerTagline}>
@@ -75,7 +75,15 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.footerCopy}>© 2019–2026 ООО «ВАЙФАНДЕР»</div>
+            <div className={styles.footerCopy}>
+              «WIFINDER-DIPLOM» не связано, не аффилировано, не поддерживается и
+              не спонсируется компанией ООО «ВАЙФАЙНДЕР». Все упомянутые
+              товарные знаки являются собственностью их соответствующих
+              владельцев. Названия продуктов, логотипы и товарные знаки ООО
+              «ВАЙФАЙНДЕР» являются зарегистрированными товарными знаками,
+              принадлежащими ООО «ВАЙФАЙНДЕР». «WIFINDER-DIPLOM» не претендует
+              на право собственности на эти товарные знаки».
+            </div>
           </div>
         </div>
       </div>

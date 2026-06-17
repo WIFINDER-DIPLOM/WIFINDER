@@ -55,6 +55,7 @@
 }
 
 .buttonNavLogin {
+  height: 3.5vh;
   padding: 0.3vh 1vh 0.3vh 1vh;
   border: solid 1px;
   background-color: transparent;
@@ -84,7 +85,7 @@
   width: 37px;
   padding-left: 0.5vh;
 }
-/* Мобильные устройства (до 768px) */
+
 @media (max-width: 768px) {
   .container {
     top: 1vh;
@@ -140,13 +141,13 @@
   }
 }
 
-/* Очень маленькие телефоны (до 480px) */
 @media (max-width: 480px) {
   .container {
     max-width: 98%;
     min-width: 95%;
     border-radius: 20px;
     top: 0.5vh;
+    right: -2rem;
   }
 
   .buttonNav {
@@ -176,7 +177,6 @@
   }
 }
 
-/* Горизонтальная ориентация на мобильных */
 @media (max-width: 768px) and (orientation: landscape) {
   .container {
     max-width: 85%;
@@ -199,4 +199,3 @@
     font-size: 11pt;
   }
 }
-

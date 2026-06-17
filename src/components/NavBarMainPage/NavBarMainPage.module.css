@@ -1,18 +1,16 @@
-/* Основной контейнер */
-/* .appContainer {
+.appContainer {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background: #f8fafc;
-} */
+}
 
-/* .navBarWrapper {
+.navBarWrapper {
   position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  z-index: 100;
-} */
+  z-index: 1000;
+}
 
 .navBarContainer {
   position: fixed;
@@ -22,7 +20,22 @@
   transform: translateX(-50%);
 }
 
-/* Контейнер для содержимого (панель + контент) */
+.cableSpeed,
+.cableConnectors,
+.cablePanels,
+.batteryCurrent,
+.batteryHours,
+.dropLength,
+.dropCurrent {
+  border-radius: 24px;
+  margin-left: 1rem;
+  padding: 0.4rem;
+  border: solid 2px;
+}
+.cableSpeed option {
+  border-radius: 1remс;
+}
+
 .contentWrapper {
   display: flex;
   flex: 1;
@@ -30,7 +43,6 @@
   transition: margin-left 0.3s ease;
 }
 
-/* Контейнер боковой панели (НЕ overlay) */
 .sidePanelContainer {
   overflow: hidden;
   white-space: nowrap;
@@ -145,7 +157,6 @@
   color: #64748b;
 }
 
-/* Основная область контента */
 .mainContentArea {
   flex: 1;
   padding: 32px;
@@ -154,7 +165,8 @@
 }
 
 .navBarCard {
-  width: 60vh;
+  width: 70vh;
+  height: 52px;
 }
 
 .expandedCard {
@@ -170,9 +182,15 @@
 .topBar {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   width: 100%;
-  height: 2.5vh;
+  height: auto;
+}
+
+.navBarShifted {
+  left: 47.3rem;
+  transition: left 0.3s ease-in-out;
 }
 
 .expandedTopBar {
@@ -197,13 +215,22 @@
   padding: 0.5rem;
 }
 
-Button:hover {
+moreDotsBtn:hover {
   background-color: white;
 }
 
 .expandedDotsBtn {
   background: transparent;
   color: #fff;
+}
+
+.expandedDotsBtn circle{
+  fill: #fff;
+  transition: all .8s ease;
+}
+
+.expandedDotsBtn:hover circle{
+  fill: black;
 }
 
 .collapsedDotsBtn {
@@ -415,7 +442,7 @@ Button:hover {
     transform: translateY(0);
   }
 }
-/* Остальные стили (таблицы, карточки и т.д.) остаются без изменений */
+
 .sectionContent {
   background: #fff;
   border-radius: 24px;
@@ -555,12 +582,73 @@ Button:hover {
   border: 1px solid #e2e8f0;
 }
 
+.sidePanelTab {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: 44px;
+  padding: 14px 6px;
+  background: var(--primary-color-orange-a-50);
+  border: none;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  cursor: pointer;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s ease;
+}
+
+.sidePanelTab:hover {
+  background: var(--primary-color-orange);
+}
+
+.sidePanelTab svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.tabLabel {
+  font-size: 11px;
+  font-weight: 500;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
 @media (max-width: 768px) {
-  /* ===== Навбар ===== */
+  .sidePanelTab {
+    top: 55vh;
+    bottom: 24px;
+    transform: none;
+    flex-direction: row;
+    width: auto;
+    height: 5vh;
+    padding: 10px 16px;
+  }
+
+  .tabLabel {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
   .navBarContainer {
     width: 100%;
     z-index: 1000000;
     background-color: transparent;
+    background: linear-gradient(90deg, #f0a88a 0%, #e89070 50%, #f0a88a 100%);
   }
 
   .navBarCard {
@@ -582,7 +670,7 @@ Button:hover {
     padding: 6px 14px;
     font-size: 13px;
     width: 7rem;
-    height: 3rem;
+    height: 3vh;
   }
 
   .moreDotsBtn {
@@ -591,6 +679,9 @@ Button:hover {
     height: 36px;
   }
 
+  button:hover {
+    background-color: var(--primary-color-white);
+  }
   .menuItemsContainer {
     padding: 8px 4px;
   }
@@ -611,11 +702,10 @@ Button:hover {
     font-size: 14px;
   }
 
-  /* ===== Контейнер контента ===== */
   .contentWrapper {
     flex-direction: column;
     margin-left: 0 !important;
-    margin-top: 72px; /* отступ под фиксированный навбар */
+    margin-top: 72px;
     min-height: calc(100vh - 72px);
   }
 
@@ -631,7 +721,7 @@ Button:hover {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    z-index: 100000;
+    z-index: 100;
   }
 
   .sidePanel {
@@ -677,7 +767,6 @@ Button:hover {
     flex: 1;
     overflow-y: auto;
     padding: 8px;
-
   }
 
   .sectionItem {
@@ -724,7 +813,6 @@ Button:hover {
     text-overflow: ellipsis;
   }
 
-  /* ===== Основная область контента ===== */
   .mainContentArea {
     padding: 12px;
     flex: 1;
@@ -759,7 +847,6 @@ Button:hover {
     padding: 16px 20px;
   }
 
-  /* ===== Общие карточки и блоки ===== */
   .sectionWrapper {
     display: flex;
     flex-direction: column;
@@ -810,8 +897,6 @@ Button:hover {
     margin: 8px 0 0 0;
     font-style: italic;
   }
-
-  /* ===== Таблицы с горизонтальным скроллом ===== */
   .dataTable {
     display: block;
     overflow-x: auto;
@@ -846,7 +931,6 @@ Button:hover {
     border-bottom: none;
   }
 
-  /* Цветные индикаторы в таблицах */
   .colorSwatch {
     display: inline-block;
     width: 16px;
@@ -857,7 +941,6 @@ Button:hover {
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  /* ===== Калькуляторы ===== */
   .calculatorCard {
     padding: 16px;
     background: #f8fafc;
@@ -881,7 +964,8 @@ Button:hover {
   .formGroup {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .formGroup label {
@@ -892,6 +976,7 @@ Button:hover {
 
   .formGroup input,
   .formGroup select {
+    margin-top: 1rem;
     padding: 10px 12px;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
@@ -947,7 +1032,6 @@ Button:hover {
     font-size: 0.85rem;
   }
 
-  /* ===== Сетка аббревиатур ===== */
   .abbrevGrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -978,7 +1062,6 @@ Button:hover {
     line-height: 1.4;
   }
 
-  /* ===== Пустое состояние ===== */
   .emptyState {
     height: 60vh;
     display: flex;
@@ -1003,7 +1086,6 @@ Button:hover {
   }
 }
 
-/* ===== Очень маленькие экраны (до 480px) ===== */
 @media (max-width: 480px) {
   .navBarCard {
     min-width: 240px;
@@ -1011,7 +1093,7 @@ Button:hover {
   }
 
   .userName {
-    display: none; /* скрываем имя на узких экранах */
+    display: none;
   }
 
   .logoutBtn {
@@ -1020,7 +1102,8 @@ Button:hover {
   }
 
   .topBar {
-    padding: 6px 10px;
+    padding: 0px 10px;
+    width: 40vh;
   }
 
   .sidePanel {
@@ -1087,13 +1170,11 @@ Button:hover {
   }
 }
 
-/* ===== Дополнительные улучшения для тач-интерфейса ===== */
 @media (hover: none) and (pointer: coarse) {
   .menuItem,
   .sectionItem,
   .calcBtn,
   .closeBtn {
-    min-height: 44px; /* минимальная область нажатия для тача */
     display: flex;
     align-items: center;
   }

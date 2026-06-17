@@ -100,23 +100,23 @@ const ContactsSections = () => {
 
         <section className={styles.section}>
           <div className={styles.decorateStick}>
-              <svg
+            <svg
+              width="493"
+              height="14"
+              viewBox="0 0 493 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={styles.svg}
+            >
+              <rect
                 width="493"
                 height="14"
-                viewBox="0 0 493 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className={styles.svg}
-              >
-                <rect
-                  width="493"
-                  height="14"
-                  rx="7"
-                  transform="matrix(1 0 0 -1 0 14)"
-                  fill="#e84d0f96"
-                />
-              </svg>
-            </div>
+                rx="7"
+                transform="matrix(1 0 0 -1 0 14)"
+                fill="#e84d0f96"
+              />
+            </svg>
+          </div>
           <h2 className={styles.sectionTitle}>Наши партнёры</h2>
           <div className={styles.partnersGrid}>
             {partners.map((name) => {
